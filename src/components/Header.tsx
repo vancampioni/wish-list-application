@@ -1,4 +1,7 @@
-import { BsSearch } from 'react-icons/bs'
+import { useState } from 'react'
+import { BsHeartFill } from 'react-icons/bs'
+import { BsTelephoneFill } from 'react-icons/bs'
+import { MdOutlinePlace } from 'react-icons/md'
 
 const Header = () => {
 
@@ -9,21 +12,19 @@ const Header = () => {
           <h1>MagaNets</h1>
         </div>
         <div>
+          <div><MdOutlinePlace /></div>
           <p>Cidade: São Paulo</p>
         </div>
         <div>
-          <span>Central de atendimento</span>
+          <div><BsTelephoneFill /></div>
+          <div>Central de atendimento</div>
         </div>
         <div>
+          <div> <BsHeartFill /> </div>
           <p>Lista de desejos</p>
         </div>
       </div>
-      <div>
-        <form autoComplete='off'>
-          <button><BsSearch /></button>
-          <input type='search' placeholder='Busca'/>
-        </form>
-      </div>
+      
     </>
   )
 }
