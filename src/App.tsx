@@ -12,8 +12,6 @@ const App = () => {
     <>
     <div className={classes.app}>
       <Header />
-      <Search />
-      <Outlet />
     </div>
     </>
   )

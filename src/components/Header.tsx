@@ -1,32 +1,66 @@
-import { useState } from 'react'
-import { BsHeartFill } from 'react-icons/bs'
-import { BsTelephoneFill } from 'react-icons/bs'
-import { MdOutlinePlace } from 'react-icons/md'
+import { useState } from "react";
+import { BsHeartFill } from "react-icons/bs";
+import { BsTelephoneFill } from "react-icons/bs";
+import { MdPlace } from "react-icons/md";
+
+//import classes from "../styles/Header.module.css";
+import * as S from '../styles/Header';
 
 const Header = () => {
-
   return (
     <>
-      <div>
+      <S.TopBorder />
+      <S.Container>
+        <S.TopHeader>
+          <S.HeaderNav>
+            <S.Brand>MagaNets</S.Brand> 
+            <div>
+              <MdPlace /> <span>Cidade: São Paulo</span>
+            </div>
+            <div>
+              <BsTelephoneFill /> <span>Central de atendimento</span> 
+            </div>
+            <div>
+              <BsHeartFill /> <span>Lista de desejos</span> 
+            </div>
+          </S.HeaderNav>
+          
+        </S.TopHeader>
+      </S.Container>
+      {/* <div className={classes.topHeader}></div>
+      <div className={classes.container}>
+        <div className={classes.brand}>MagaNets</div>
         <div>
-          <h1>MagaNets</h1>
+          <span><MdOutlinePlace /></span>
+          <span>Cidade: São Paulo</span>
+          
+            <span><BsTelephoneFill /></span>
+            <span>Central de atendimento</span>
+          
         </div>
+      </div> */}
+      {/* <div className={classes.container}>
         <div>
-          <div><MdOutlinePlace /></div>
-          <p>Cidade: São Paulo</p>
-        </div>
-        <div>
-          <div><BsTelephoneFill /></div>
-          <div>Central de atendimento</div>
-        </div>
-        <div>
-          <div> <BsHeartFill /> </div>
-          <p>Lista de desejos</p>
-        </div>
-      </div>
-      
-    </>
-  )
-}
 
-export default Header
+        </div>
+        <div>
+          <span>MagaNets</span>
+        
+        
+          <span><MdOutlinePlace /></span>
+          <span>Cidade: São Paulo</span>
+        
+        
+          <span><BsTelephoneFill /></span>
+          <span>Central de atendimento</span>
+        
+        
+          <span> <BsHeartFill /> </span>
+          <span>Lista de desejos</span>
+        </div>
+      </div> */}
+    </>
+  );
+};
+
+export default Header;
