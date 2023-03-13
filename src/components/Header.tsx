@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsHeartFill } from "react-icons/bs";
+import { BsSuitHeartFill } from "react-icons/bs";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdPlace } from "react-icons/md";
 
@@ -20,7 +20,7 @@ const Header = () => {
               <BsTelephoneFill /> <span>Central de atendimento</span> 
             </div>
             <div className="nav__clickable">
-              <BsHeartFill /> <span>Lista de desejos</span> 
+              <BsSuitHeartFill /> <span>Lista de desejos</span> 
             </div>
           </S.Header__Nav>
           
