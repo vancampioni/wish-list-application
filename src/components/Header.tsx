@@ -8,56 +8,24 @@ import * as S from '../styles/Header';
 const Header = () => {
   return (
     <>
-      <S.TopBorder />
-      <S.Container>
-        <S.TopHeader>
-          <S.HeaderNav>
-            <S.Brand>MagaNets</S.Brand> 
+      <S.Header__BorderTop />
+      <S.Header__Container>
+        <S.Header__Top>
+          <S.Header__Nav>
+            <S.Header__Logo>MagaNets</S.Header__Logo> 
             <div>
               <MdPlace /> <span>Cidade: São Paulo</span>
             </div>
-            <div className="clickable">
+            <div className="nav__clickable">
               <BsTelephoneFill /> <span>Central de atendimento</span> 
             </div>
-            <div className="clickable">
+            <div className="nav__clickable">
               <BsHeartFill /> <span>Lista de desejos</span> 
             </div>
-          </S.HeaderNav>
+          </S.Header__Nav>
           
-        </S.TopHeader>
-      </S.Container>
-      {/* <div className={classes.topHeader}></div>
-      <div className={classes.container}>
-        <div className={classes.brand}>MagaNets</div>
-        <div>
-          <span><MdOutlinePlace /></span>
-          <span>Cidade: São Paulo</span>
-          
-            <span><BsTelephoneFill /></span>
-            <span>Central de atendimento</span>
-          
-        </div>
-      </div> */}
-      {/* <div className={classes.container}>
-        <div>
-
-        </div>
-        <div>
-          <span>MagaNets</span>
-        
-        
-          <span><MdOutlinePlace /></span>
-          <span>Cidade: São Paulo</span>
-        
-        
-          <span><BsTelephoneFill /></span>
-          <span>Central de atendimento</span>
-        
-        
-          <span> <BsHeartFill /> </span>
-          <span>Lista de desejos</span>
-        </div>
-      </div> */}
+        </S.Header__Top>
+      </S.Header__Container>
     </>
   );
 };

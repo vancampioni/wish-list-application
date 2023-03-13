@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const TopBorder = styled.div`
+export const Header__BorderTop = styled.div`
   height: 7px;
   background-color: #371052;
 `;
 
-export const Container = styled.div`
+export const Header__Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -14,13 +14,13 @@ export const Container = styled.div`
   background-color: #5a2d82;
   color: #fff;
 `;
-export const TopHeader = styled.div`
+export const Header__Top = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
 `;
 
-export const HeaderNav = styled.div`
+export const Header__Nav = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -29,7 +29,7 @@ export const HeaderNav = styled.div`
   font-weight: bold;
   font-size: 13px;
 
-  .clickable {
+  .nav__clickable {
     cursor: pointer;
   }
 
@@ -38,7 +38,7 @@ export const HeaderNav = styled.div`
   }
 `;
 
-export const Brand = styled.div`
+export const Header__Logo = styled.div`
   display: flex;
   font-size: 25px;
   align-items: flex-start;

@@ -6,12 +6,12 @@ const Search = () => {
 
   return (
     <>
-      <S.Container>
-          <S.Button>
+      <S.Search__Container>
+          <S.Search__Button>
             <BsSearch />
-          </S.Button>
-          <input typeof='text' placeholder=' Busca' className='search'/>
-        </S.Container>
+          </S.Search__Button>
+          <input typeof='text' placeholder=' Busca'/>
+        </S.Search__Container>
     </>
   )
 }

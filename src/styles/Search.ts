@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Search__Container = styled.div`
   display: flex;
   max-width: 100%;
   height: 70px;
@@ -10,7 +10,6 @@ export const Container = styled.div`
   padding-left: 50px;
 
   input {
-    display:flex;
     width: 792px;
     height: 45px;
     border-radius: 0px 5px 5px 0px;
@@ -23,7 +22,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Button = styled.div`
+export const Search__Button = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
