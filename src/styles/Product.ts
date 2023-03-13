@@ -5,9 +5,9 @@ export const Product_Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 10%;
+  max-width: 12%;
   width: auto;
-  height: 200px;
+  height: 230px;
   border: 1px solid #d1d1d1;
   border-radius: 3px;
   margin: 10px;
@@ -55,9 +55,10 @@ export const Product__Container__Removal = styled.div`
   position: absolute;
   justify-content: flex-end;
   align-items: flex-end;
-  max-width: 10.5%;
+  max-width: 12.3%;
   width: 100%;
-  height: 30px;
+  height: 33px;
+  cursor: pointer;
 `
 
 export const Product__Image = styled.div`
@@ -67,7 +68,7 @@ export const Product__Image = styled.div`
   flex-direction: column;
   max-width: 60%;
   width: 100%;
-  height: 80px;
+  height: 100px;
   border: 1px solid #d1d1d1;
   border-radius: 3px;
   margin-top: -30px;
@@ -76,7 +77,7 @@ export const Product__Image = styled.div`
 export const Product__Title = styled.div`
   display: flex;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   color: #242424;
   margin-top: 5px;
@@ -86,7 +87,7 @@ export const Product__Price = styled.div`
   display: flex;
   color: #e4ce46;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   margin-top: 30px;
 `;
