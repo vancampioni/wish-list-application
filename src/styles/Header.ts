@@ -29,6 +29,10 @@ export const HeaderNav = styled.div`
   font-weight: bold;
   font-size: 13px;
 
+  .clickable {
+    cursor: pointer;
+  }
+
   span {
     margin-left: 7px;
   }
@@ -39,14 +43,6 @@ export const Brand = styled.div`
   font-size: 25px;
   align-items: flex-start;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
 `;
 
-// export const City = styled.div`
-//   font-weight: bold;
-//   font-size: 12px;
-// `;
-
-// export const ConsumerService = styled.div`
-//   font-weight: bold;
-//   font-size: 12px;
-// `;

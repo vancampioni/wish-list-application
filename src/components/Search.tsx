@@ -1,17 +1,17 @@
 import { BsSearch } from 'react-icons/bs'
 
+import * as S from '../styles/Search';
+
 const Search = () => {
 
   return (
     <>
-      <div>
-        <form autoComplete='off'>
-          <button>
+      <S.Container>
+          <S.Button>
             <BsSearch />
-          </button>
-          <input typeof='text' placeholder=' Busca'/>
-        </form>
-      </div>
+          </S.Button>
+          <input typeof='text' placeholder=' Busca' className='search'/>
+        </S.Container>
     </>
   )
 }

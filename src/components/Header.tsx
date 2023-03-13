@@ -3,7 +3,6 @@ import { BsHeartFill } from "react-icons/bs";
 import { BsTelephoneFill } from "react-icons/bs";
 import { MdPlace } from "react-icons/md";
 
-//import classes from "../styles/Header.module.css";
 import * as S from '../styles/Header';
 
 const Header = () => {
@@ -17,10 +16,10 @@ const Header = () => {
             <div>
               <MdPlace /> <span>Cidade: São Paulo</span>
             </div>
-            <div>
+            <div className="clickable">
               <BsTelephoneFill /> <span>Central de atendimento</span> 
             </div>
-            <div>
+            <div className="clickable">
               <BsHeartFill /> <span>Lista de desejos</span> 
             </div>
           </S.HeaderNav>
