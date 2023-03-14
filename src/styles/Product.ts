@@ -5,33 +5,32 @@ export const Product_Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 12%;
-  width: auto;
-  height: 230px;
+  width: 225px;
+  height: 345px;
   border: 1px solid #d1d1d1;
-  border-radius: 3px;
-  margin: 10px;
+  border-radius: 4.5px;
+  margin: 15px 30px 30px 30px;
 `;
 
 export const Product__Container__Fav = styled.div`
   display: flex;
+  width: 217.5px;
+  height: 354px;
+  position: absolute;
   .product__container__fav__top {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 20px;
-    height: 25px;
-    margin-left: 13px;
-    margin-top: 7px;
+    width: 30px;
+    height: 37.5px;
     background-color: #000;
-    border-radius: 5px 5px 0 0 ;
+    border-radius: 3px 3px 0 0 ;
   }
 
-  .product__fav__icon {
-    display: flex;
+  .product__icon__fav {
     color: #fff;
-    font-size: 12px;
+    font-size: 18px;
     cursor: pointer;
   }
 
@@ -40,25 +39,27 @@ export const Product__Container__Fav = styled.div`
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 20px;
-    height: 12px;
-    margin-left: 13px;
-    margin-top: 32px;
-    border-left: 9px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 7px solid #000;
+    width: 30px;
+    height: 18px;
+    margin-top: 37.5px;
+    border-left: 13.5px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 10.5px solid #000;
   }
 `;
 
-export const Product__Container__Removal = styled.div`
+export const Product__Container__Delete = styled.div`
   display: flex;
   position: absolute;
   justify-content: flex-end;
-  align-items: flex-end;
-  max-width: 12.3%;
-  width: 100%;
-  height: 33px;
-  cursor: pointer;
+  align-items: flex-start;
+  width: 217.5px;
+  height: 337.5px;
+  
+  .product__icon_delete {
+    font-size: 30px;
+    cursor: pointer;
+  }
 `
 
 export const Product__Image = styled.div`
@@ -66,18 +67,17 @@ export const Product__Image = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 60%;
-  width: 100%;
-  height: 100px;
+  width: 135px;
+  height: 170px;
   border: 1px solid #d1d1d1;
-  border-radius: 3px;
-  margin-top: -30px;
+  border-radius: 4.5px;
+  margin-top: -40px;
 `;
 
 export const Product__Title = styled.div`
   display: flex;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 21px;
   text-align: center;
   color: #242424;
   margin-top: 5px;
@@ -87,7 +87,7 @@ export const Product__Price = styled.div`
   display: flex;
   color: #e4ce46;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 21px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 45px;
 `;
