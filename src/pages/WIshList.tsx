@@ -9,11 +9,7 @@ const WishList = () => {
     <>
       <S.Page__Container>
         <S.Page__Title>Home {">"} Lista de desejos</S.Page__Title>
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        <Product top_product="delete"/>
       </S.Page__Container>
     </>
   );

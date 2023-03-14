@@ -9,16 +9,7 @@ const Home = () => {
     <>
       <S.Page__Container>
         <S.Page__Title>Home</S.Page__Title>
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        <Product top_product="favorite"/>
       </S.Page__Container>
     </>
   );

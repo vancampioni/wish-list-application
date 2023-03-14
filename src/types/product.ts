@@ -1,5 +1,6 @@
 export type ProductProps = {
-    image_url: string,
-    title: string,
-    price: number
+    top_product: string,
+    // image_url: string,
+    // title: string,
+    // price: number
 }
