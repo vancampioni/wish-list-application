@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Home__Container = styled.div`
+export const Page__Container = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +8,7 @@ export const Home__Container = styled.div`
   
 `;
 
-export const Home__Title = styled.div`
+export const Page__Title = styled.div`
   display: flex;
   flex-direction: column;
   width: 98%;

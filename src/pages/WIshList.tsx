@@ -4,16 +4,11 @@ import { ProductProps } from "../types/product";
 
 import * as S from "../styles/Page";
 
-const Home = () => {
+const WishList = () => {
   return (
     <>
       <S.Page__Container>
-        <S.Page__Title>Home</S.Page__Title>
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        <S.Page__Title>Home {">"} Lista de desejos</S.Page__Title>
         <Product />
         <Product />
         <Product />
@@ -24,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default WishList;

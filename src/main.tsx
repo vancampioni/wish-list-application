@@ -6,6 +6,7 @@ import App from './App'
 import './index.css'
 
 import Home from './pages/Home'
+import WishList from './pages/WIshList'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/wish-list",
+        element: <WishList />,
       }
     ]
   }
