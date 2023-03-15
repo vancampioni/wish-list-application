@@ -17,6 +17,6 @@ export const Page__Title = styled.div`
 `;
 
 export const Page__Skeleton = styled.span`
-  margin: 15px 30px 30px 30px;
+  margin: 45px 60px 60px 60px;
   
 `;
