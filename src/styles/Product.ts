@@ -41,3 +41,13 @@ export const Product__Price = styled.div`
   text-align: center;
   margin-top: 45px;
 `;
+
+export const Product__Skeleton = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 225px;
+  height: 345px;
+  border-radius: 4.5px;
+  margin: 15px 30px 30px 30px;
+`

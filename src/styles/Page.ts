@@ -1,3 +1,4 @@
+import { border } from './../../node_modules/@mui/system/index.d';
 import styled from "styled-components";
 
 export const Page__Container = styled.div`
@@ -5,7 +6,6 @@ export const Page__Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  
 `;
 
 export const Page__Title = styled.div`
@@ -13,5 +13,10 @@ export const Page__Title = styled.div`
   flex-direction: column;
   width: 98%;
   font-weight: bold;
-  margin: 20px 0 20px 57px
+  margin: 20px 20px 20px 57px;
+`;
+
+export const Page__Skeleton = styled.span`
+  margin: 15px 30px 30px 30px;
+  
 `;

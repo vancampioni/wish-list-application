@@ -1,22 +1,24 @@
-import { useState } from 'react'
-import { Outlet } from 'react-router-dom'
-import { ProductProps } from '../src/types/product'
-import * as S from '../src/styles/App';
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import { ProductProps } from "../src/types/product";
+import * as S from "../src/styles/App";
 
-import Header from './components/Header'
-import Search from './components/Search'
+import Header from "./components/Header";
+import Search from "./components/Search";
+import { SkeletonTheme } from "react-loading-skeleton";
 
-const App = () => {  
-  
+const App = () => {
   return (
     <>
-    <S.App>
-      <Header />
-      <Search />
-      <Outlet />
-    </S.App>
+      <S.App>
+        <SkeletonTheme baseColor="#d1d1d1" highlightColor="#4D4D4D">
+          <Header />
+          <Search />
+          <Outlet />
+        </SkeletonTheme>
+      </S.App>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
