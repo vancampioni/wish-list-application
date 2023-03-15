@@ -21,7 +21,7 @@ export const Product__Image = styled.div`
   height: 170px;
   border: 1px solid #d1d1d1;
   border-radius: 4.5px;
-  margin-top: -40px;
+  margin-top: -20px;
 `;
 
 export const Product__Title = styled.div`

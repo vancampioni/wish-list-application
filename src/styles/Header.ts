@@ -31,6 +31,7 @@ export const Header__Nav = styled.div`
 
   .nav__clickable {
     cursor: pointer;
+    color: #fff;
   }
 
   span {
@@ -43,6 +44,7 @@ export const Header__Logo = styled.div`
   font-size: 25px;
   align-items: flex-start;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
   cursor: pointer;
 `;
 
