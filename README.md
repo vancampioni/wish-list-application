@@ -7,4 +7,5 @@ Implementação realizada com React.js e Vite
 Tipada feita com TypeScript
 
 Para rodar o projeto
+<br/>
 npm run dev
