@@ -19,6 +19,9 @@ export const AddFavoriteProduct__Container = styled.div`
     color: #fff;
     font-size: 18px;
     cursor: pointer;
+    &:active {
+      color: red;
+    }
   }
 
   .product__container__fav__bottom {

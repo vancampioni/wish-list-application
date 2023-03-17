@@ -8,12 +8,33 @@ import * as S from "../styles/Page";
 import Header from "../components/Header";
 import Search from "../components/Search";
 
-const Home = () => {
+const Home = ({ children }: any) => {
   const [products, setProducts] = useState<ProductProps[]>([]);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
+  const [wishList, setWishList] = useState<ProductProps[]>([]);
 
-  const searchProducts = products.filter((product => product.title.toLowerCase().includes(search.toLowerCase())));
+  const addProductToWishList = (id: number) => {
+    const verify = wishList.filter((p) => p.id === id);
+    if (verify.length === 0) {
+      setWishList((prevState) => [
+        ...prevState,
+        ...products.filter((product) => product.id === id),
+      ]);
+    } else {
+      setWishList(wishList.filter((p) => p.id !== id))
+    }
+  };
+
+  localStorage.setItem("products",JSON.stringify(wishList))
+
+  const removeProductToTheWishList = (id: number) => {
+    setWishList(wishList.filter((p) => p.id !== id))
+  };
+
+  const searchProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   const loadProducts = async () => {
     await fetch(
@@ -26,16 +47,20 @@ const Home = () => {
       });
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     loadProducts();
   }, []);
+
+  useEffect(() => {
+    console.log(wishList);
+  }, [wishList]);
 
   return (
     <>
       <Header />
       <Search setSearch={setSearch} search={search} />
       <S.Page__Container>
-        <S.Page__Title>Home</S.Page__Title>
+        <S.Page__Title__Home>Home</S.Page__Title__Home>
         {loading && (
           <Skeleton
             wrapper={S.Page__Skeleton}
@@ -45,13 +70,16 @@ const Home = () => {
             inline={true}
           />
         )}
-        {searchProducts.map((p, index) => (
+        {searchProducts.map((p) => (
           <Product
-            key={index}
-            top_product="favorite"
+            key={p.id}
+            id={p.id}
             image_url={p.image_url}
             title={p.title}
             price={p.price}
+            top_product="favorite"
+            addProductToWishList={addProductToWishList}
+            removeProductToTheWishList={removeProductToTheWishList}
           />
         ))}
       </S.Page__Container>

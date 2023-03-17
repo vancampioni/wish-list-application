@@ -24,12 +24,14 @@ const Header = () => {
             </div>
             <Link to="/wish-list">
               <div className="nav__clickable">
-                <BsSuitHeartFill /> <span>Lista de desejos</span>
+                <BsSuitHeartFill /> <span>Lista de desejo</span>
               </div>
             </Link>
           </S.Header__Nav>
         </S.Header__Top>
       </S.Header__Container>
+
+
     </>
   );
 };
