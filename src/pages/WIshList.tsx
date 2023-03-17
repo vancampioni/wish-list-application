@@ -11,29 +11,28 @@ const WishList = () => {
   const [products, setProducts] = useState<ProductProps[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [wishList, setWishList] = useState<ProductProps[]>([]);
+  const [wishListProducts, setWishListProducts] = useState<ProductProps[]>([]);
 
   const addProductToWishList = (id: number) => {
-    const verify = wishList.filter((p) => p.id === id);
-    if (verify.length === 0) {
-      setWishList((prevState) => [
-        ...prevState,
-        ...products.filter((product) => product.id === id),
-      ]);
-    } else {
-      setWishList(wishList.filter((p) => p.id !== id))
-    }
+    // const verify = wishList.filter((p) => p.id === id);
+    // if (verify.length === 0) {
+    //   setWishList((prevState) => [
+    //     ...prevState,
+    //     ...products.filter((product) => product.id === id),
+    //   ]);
+    // } else {
+    //   setWishList(wishList.filter((p) => p.id !== id))
+    // }
   };
 
   const productStr: any = localStorage.getItem("products");
-  const wishListProducts = JSON.parse(productStr)  
+  const localStorageProducts = JSON.parse(productStr)  
+  
   
   const removeProductToTheWishList = (id: number) => {
-    setWishList(
+    setWishListProducts(
       wishListProducts.filter((product: any) => product.id !== id)
     );
-    
-    console.log("clicked", wishListProducts)
   };
 
   const searchProducts = wishListProducts.filter((product: any) =>
@@ -56,8 +55,9 @@ const WishList = () => {
   }, []);
 
   useEffect(() => {
-    console.log(wishList);
-  }, [wishList]);
+    setWishListProducts(localStorageProducts)
+    console.log(wishListProducts)
+  }, []);
 
 
 
