@@ -14,11 +14,6 @@ export const Page__Title__Home = styled.span`
   width: 98%;
   font-weight: bold;
   margin: 20px 20px 20px 50px;
-  cursor: pointer;
-
-  &:hover {
-    color: #5c5c5c;
-  }
 `;
 
 export const Page__Title__WishList = styled.div`

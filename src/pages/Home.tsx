@@ -7,8 +7,9 @@ import "react-loading-skeleton/dist/skeleton.css";
 import * as S from "../styles/Page";
 import Header from "../components/Header";
 import Search from "../components/Search";
+import { HomeProps } from "../types/home";
 
-const Home = ({ children }: any) => {
+const Home = () => {
   const [products, setProducts] = useState<ProductProps[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
@@ -25,11 +26,15 @@ const Home = ({ children }: any) => {
       setWishList(wishList.filter((p) => p.id !== id))
     }
   };
-
+  
   localStorage.setItem("products",JSON.stringify(wishList))
 
+  const productStr: any = localStorage.getItem("products");
+  const wishListProducts =JSON.parse(productStr);
+
   const removeProductToTheWishList = (id: number) => {
-    setWishList(wishList.filter((p) => p.id !== id))
+    setWishList(wishListProducts.filter((p: any) => p.id !== id))
+    console.log("clicked", wishList)
   };
 
   const searchProducts = products.filter((product) =>
@@ -52,7 +57,7 @@ const Home = ({ children }: any) => {
   }, []);
 
   useEffect(() => {
-    console.log(wishList);
+    console.log(wishListProducts);
   }, [wishList]);
 
   return (

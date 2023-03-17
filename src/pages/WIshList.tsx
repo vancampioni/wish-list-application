@@ -21,15 +21,17 @@ const WishList = () => {
         ...products.filter((product) => product.id === id),
       ]);
     } else {
-      setWishList(wishList.filter((p) => p.id !== id));
+      setWishList(wishList.filter((p) => p.id !== id))
     }
   };
 
-  const productStr: string | any = localStorage.getItem("products");
-  const wishListProducts = JSON.parse(productStr);
-
+  const productStr: any = localStorage.getItem("products");
+  const wishListProducts = JSON.parse(productStr)  
+  
   const removeProductToTheWishList = (id: number) => {
-    setWishList(wishList.filter((p) => p.id !== id));
+    setWishList((wishListProducts).filter((p: any) => p.id !== id ));
+    
+    console.log("clicked", id)
   };
 
   const searchProducts = wishListProducts.filter((product: any) =>
@@ -55,6 +57,8 @@ const WishList = () => {
     console.log(wishList);
   }, [wishList]);
 
+
+
   return (
     <>
       <Header />
@@ -71,7 +75,7 @@ const WishList = () => {
             inline={true}
           />
         )}
-        {searchProducts.map((p) => (
+        {searchProducts.map((p: any) => (
           <Product
             key={p.id}
             id={p.id}

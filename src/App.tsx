@@ -4,8 +4,7 @@ import { ProductProps } from "../src/types/product";
 import * as S from "../src/styles/App";
 
 import { SkeletonTheme } from "react-loading-skeleton";
-
-type ContextType = {products: ProductProps | null};
+import { useState } from "react";
 
 const App = () => {
 
