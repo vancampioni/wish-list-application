@@ -29,9 +29,11 @@ const WishList = () => {
   const wishListProducts = JSON.parse(productStr)  
   
   const removeProductToTheWishList = (id: number) => {
-    setWishList((wishListProducts).filter((p: any) => p.id !== id ));
+    setWishList(
+      wishListProducts.filter((product: any) => product.id !== id)
+    );
     
-    console.log("clicked", id)
+    console.log("clicked", wishListProducts)
   };
 
   const searchProducts = wishListProducts.filter((product: any) =>
