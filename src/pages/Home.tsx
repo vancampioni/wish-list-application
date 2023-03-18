@@ -32,11 +32,6 @@ const Home = () => {
   const productStr: any = localStorage.getItem("products");
   const wishListProducts =JSON.parse(productStr);
 
-  const removeProductToTheWishList = (id: number) => {
-    setWishList(wishListProducts.filter((p: any) => p.id !== id))
-    console.log("clicked", wishList)
-  };
-
   const searchProducts = products.filter((product) =>
     product.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -84,7 +79,6 @@ const Home = () => {
             price={p.price}
             top_product="favorite"
             addProductToWishList={addProductToWishList}
-            removeProductToTheWishList={removeProductToTheWishList}
           />
         ))}
       </S.Page__Container>

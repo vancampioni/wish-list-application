@@ -8,22 +8,9 @@ import Search from "../components/Search";
 import Skeleton from "react-loading-skeleton";
 
 const WishList = () => {
-  const [products, setProducts] = useState<ProductProps[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [wishListProducts, setWishListProducts] = useState<ProductProps[]>([]);
-
-  const addProductToWishList = (id: number) => {
-    // const verify = wishList.filter((p) => p.id === id);
-    // if (verify.length === 0) {
-    //   setWishList((prevState) => [
-    //     ...prevState,
-    //     ...products.filter((product) => product.id === id),
-    //   ]);
-    // } else {
-    //   setWishList(wishList.filter((p) => p.id !== id))
-    // }
-  };
 
   const productStr: any = localStorage.getItem("products");
   const localStorageProducts = JSON.parse(productStr)  
@@ -39,24 +26,12 @@ const WishList = () => {
     product.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  const loadProducts = async () => {
-    await fetch(
-      "https://run.mocky.io/v3/66063904-d43c-49ed-9329-d69ad44b885e/0"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data.products);
-        setLoading(false);
-      });
-  };
-
   useLayoutEffect(() => {
-    loadProducts();
+    setLoading(false);
   }, []);
 
   useEffect(() => {
     setWishListProducts(localStorageProducts)
-    console.log(wishListProducts)
   }, []);
 
 
@@ -85,7 +60,6 @@ const WishList = () => {
             title={p.title}
             price={p.price}
             top_product="delete"
-            addProductToWishList={addProductToWishList}
             removeProductToTheWishList={removeProductToTheWishList}
           />
         ))}
