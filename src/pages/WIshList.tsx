@@ -13,14 +13,17 @@ const WishList = () => {
   const [wishListProducts, setWishListProducts] = useState<ProductProps[]>([]);
 
   const productStr: any = localStorage.getItem("products");
-  const localStorageProducts = JSON.parse(productStr)  
-  
   
   const removeProductToTheWishList = (id: number) => {
-    setWishListProducts(
-      wishListProducts.filter((product: any) => product.id !== id)
-    );
-  };
+    try {
+        setWishListProducts(
+          wishListProducts.filter((product: any) => product.id !== id)
+        );
+      } catch (err) {
+        throw err;
+      }
+    };
+    
 
   const searchProducts = wishListProducts.filter((product: any) =>
     product.title.toLowerCase().includes(search.toLowerCase())
@@ -31,10 +34,9 @@ const WishList = () => {
   }, []);
 
   useEffect(() => {
-    setWishListProducts(localStorageProducts)
+    const localStorageProducts = JSON.parse(productStr);
+    setWishListProducts(localStorageProducts);
   }, []);
-
-
 
   return (
     <>
@@ -42,7 +44,9 @@ const WishList = () => {
       <Search setSearch={setSearch} search={search} />
       <S.Page__Container>
         <S.Page__Title__Home> Home </S.Page__Title__Home>
-        <S.Page__Title__WishList>{">"} Lista de desejos</S.Page__Title__WishList>
+        <S.Page__Title__WishList>
+          {">"} Lista de desejos
+        </S.Page__Title__WishList>
         {loading && (
           <Skeleton
             wrapper={S.Page__Skeleton}
