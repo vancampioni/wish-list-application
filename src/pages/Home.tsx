@@ -12,25 +12,32 @@ const Home = () => {
   const [products, setProducts] = useState<ProductProps[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const localStorageProducts: any = localStorage.getItem('products')
-  const [wishList, setWishList] = useState<ProductProps[]>([JSON.parse(localStorageProducts)]);
+  const localStorageProducts: any = localStorage.getItem("products");
+  const [wishList, setWishList] = useState<ProductProps[]>([
+    JSON.parse(localStorageProducts),
+  ]);
+  const [favoriteButtonColor, setFavoriteButtonColor] = useState("#fff");
 
   const addProductToWishList = (id: number) => {
     try {
-
       const verify = wishList.filter((p) => p.id === id);
       if (verify.length === 0) {
         setWishList((prevState) => [
           ...prevState,
           ...products.filter((product) => product.id === id),
         ]);
+        setFavoriteButtonColor("red");
+        console.log(favoriteButtonColor);
       } else {
         setWishList(wishList.filter((p) => p.id !== id));
+        setFavoriteButtonColor("#fff");
       }
-    } catch(err) {
-      throw err
+    } catch (error) {
+      console.log(error);
     }
   };
+
+  const removeProductToTheWishList = (id: number) => {};
 
   const searchProducts = products.filter((product) =>
     product.title.toLowerCase().includes(search.toLowerCase())
@@ -46,21 +53,21 @@ const Home = () => {
           setProducts(data.products);
           setLoading(false);
         });
-    } catch (err) {
-      throw err;
+    } catch (error) {
+      console.log(error);
     }
   };
-  
+
   useEffect(() => {
-    if(localStorageProducts !== null) {
-      setWishList(JSON.parse(localStorageProducts))
+    if (localStorageProducts !== null) {
+      setWishList(JSON.parse(localStorageProducts));
     }
-  }, [])
-  
+  }, []);
+
   useEffect(() => {
     localStorage.setItem("products", JSON.stringify(wishList));
   }, [wishList]);
-  
+
   useLayoutEffect(() => {
     loadProducts();
   }, []);
@@ -89,6 +96,7 @@ const Home = () => {
             price={p.price}
             top_product="favorite"
             addProductToWishList={addProductToWishList}
+            removeProductToTheWishList={removeProductToTheWishList}
           />
         ))}
       </S.Page__Container>

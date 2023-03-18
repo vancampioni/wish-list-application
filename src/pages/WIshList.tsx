@@ -19,12 +19,15 @@ const WishList = () => {
         setWishListProducts(
           wishListProducts.filter((product: any) => product.id !== id)
         );
-      } catch (err) {
-        throw err;
+      } catch (error) {
+        console.log(error)
       }
     };
-    
 
+    const addProductToWishList = (id: number) => {
+      
+    };
+    
   const searchProducts = wishListProducts.filter((product: any) =>
     product.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -69,6 +72,7 @@ const WishList = () => {
             price={p.price}
             top_product="delete"
             removeProductToTheWishList={removeProductToTheWishList}
+            addProductToWishList={addProductToWishList}
           />
         ))}
       </S.Page__Container>
