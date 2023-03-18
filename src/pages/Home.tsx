@@ -7,7 +7,6 @@ import "react-loading-skeleton/dist/skeleton.css";
 import * as S from "../styles/Page";
 import Header from "../components/Header";
 import Search from "../components/Search";
-import { HomeProps } from "../types/home";
 
 const Home = () => {
   const [products, setProducts] = useState<ProductProps[]>([]);
@@ -51,7 +50,6 @@ const Home = () => {
       throw err;
     }
   };
-
   
   useEffect(() => {
     if(localStorageProducts !== null) {

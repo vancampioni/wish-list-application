@@ -38,6 +38,10 @@ const WishList = () => {
     setWishListProducts(localStorageProducts);
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("products", JSON.stringify(wishListProducts))
+  }, [wishListProducts]);
+
   return (
     <>
       <Header />
