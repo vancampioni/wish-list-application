@@ -7,6 +7,7 @@ Projeto com a funcionalidade adicionar e remover produtos de uma lista de produt
 # 🚀 Instalação
 
 git clone https://github.com/vancampioni/wish-list-application.git
+<br />
 cd wish-list-application
 
 Instalação de dependências
