@@ -10,9 +10,10 @@ git clone https://github.com/vancampioni/wish-list-application.git
 <br />
 cd wish-list-application
 
-Instalação de dependências
+<strong>Instalação de dependências</strong>
+<br />
 npm install
 
-Executar o projeto
+<strong>Executar o projeto</strong>
 npm run dev
 
