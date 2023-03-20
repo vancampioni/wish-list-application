@@ -1,7 +1,7 @@
 <h1 align="center" style="font-weight: bold;"> Wish List ❤️</h1>
 
 <p align="center">
-Projeto com a funcionalidade adicionar e remover produtos de uma lista de produtos favoritos
+Projeto com a funcionalidade de adicionar e remover produtos de uma lista de produtos favoritos
 </p>
 
 # 🚀 Instalação
