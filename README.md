@@ -15,5 +15,6 @@ cd wish-list-application
 npm install
 
 <strong>Executar o projeto</strong>
+<br />
 npm run dev
 
