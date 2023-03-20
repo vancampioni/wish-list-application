@@ -16,7 +16,6 @@ const Home = () => {
   const [wishList, setWishList] = useState<ProductProps[]>([
     JSON.parse(localStorageProducts),
   ]);
-  const [favoriteButtonColor, setFavoriteButtonColor] = useState("#fff");
 
   const addProductToWishList = (id: number) => {
     try {
@@ -26,11 +25,8 @@ const Home = () => {
           ...prevState,
           ...products.filter((product) => product.id === id),
         ]);
-        setFavoriteButtonColor("red");
-        console.log(favoriteButtonColor);
       } else {
         setWishList(wishList.filter((p) => p.id !== id));
-        setFavoriteButtonColor("#fff");
       }
     } catch (error) {
       console.log(error);
